@@ -11,7 +11,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 from sklearn.model_selection import train_test_split
-from pycaret.classification import *
 
 import pickle
 from io import BytesIO
