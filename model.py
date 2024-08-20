@@ -95,8 +95,6 @@ def preprocessamento():
     ])
     return pipeline
 
-df = pd.read_csv('/kaggle/input/credit-scoring/credit_scoring.csv').drop(columns='Unnamed: 0')
-
 def pre_df(df):
     df['data_ref'] = pd.to_datetime(df['data_ref'])
     df['mes'] = df['data_ref'].dt.month_name()
