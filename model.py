@@ -25,4 +25,8 @@ st.sidebar.write('# EBAC - Projeto Final')
 st.sidebar.write("## Suba o arquivo")
 data_file_1 = st.sidebar.file_uploader("Bank Credit Dataset", type = ['csv','ftr'])
 
-st.wread(data_file_1)
+# Verifica se há conteúdo carregado na aplicação
+if (data_file_1 is not None):
+    df = pd.read_csv(data_file_1).drop(columns=['Unnamed: 0'])
+
+    st.wread(df)
