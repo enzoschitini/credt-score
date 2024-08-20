@@ -30,3 +30,4 @@ if (data_file_1 is not None):
     df = pd.read_csv(data_file_1).drop(columns=['Unnamed: 0'])
 
     st.write(df)
+    df.to_csv('dati.csv', index=False)
