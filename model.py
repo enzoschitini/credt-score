@@ -29,4 +29,4 @@ data_file_1 = st.sidebar.file_uploader("Bank Credit Dataset", type = ['csv','ftr
 if (data_file_1 is not None):
     df = pd.read_csv(data_file_1).drop(columns=['Unnamed: 0'])
 
-    st.wread(df)
+    st.write(df)
