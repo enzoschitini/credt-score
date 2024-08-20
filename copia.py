@@ -113,10 +113,10 @@ def pre_df(df):
 
 st.sidebar.write("## Suba o arquivo")
 data_file_1 = st.sidebar.file_uploader("Bank Credit Dataset", type = ['csv','ftr'])
+df = pd.read_csv(data_file_1).drop(columns=['Unnamed: 0'])
 
 # Verifica se há conteúdo carregado na aplicação
 if (data_file_1 is not None):
-    df = pd.read_csv(data_file_1).drop(columns=['Unnamed: 0'])
     df = pre_df(df)
     df_ML = pd.get_dummies(df, drop_first=True)
 
